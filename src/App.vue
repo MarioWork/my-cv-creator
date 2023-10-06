@@ -1,7 +1,19 @@
 <template>
-    <div></div>
+    <main>
+        <SideBarContainer></SideBarContainer>
+        <CvContainer></CvContainer>
+    </main>
 </template>
 
-<script setup></script>
+<script setup>
+    import SideBarContainer from '../components/sidebar-container';
+    import CvContainer from '../components/cv-container';
+</script>
 
-<style scoped></style>
+<style scoped>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+</style>

@@ -5,15 +5,14 @@
     </main>
 </template>
 
-<script setup>
-    import SideBarContainer from '../components/sidebar-container';
-    import CvContainer from '../components/cv-container';
+<script setup allowJs>
+    import SideBarContainer from './components/sidebar/sidebar-container.vue';
+    import CvContainer from './components/cv-container.vue';
 </script>
 
 <style scoped>
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
+    main {
+        display: grid;
+        grid-template-columns: 30% 70%;
     }
 </style>

@@ -1,11 +1,13 @@
 <template>
-    <button @click.prevent="onClickHandler" class="header">
-        {{ title }}
-        <ChevronDown v-if="!showContent" class="icon"></ChevronDown>
-        <ChevronUp v-else class="icon"></ChevronUp>
-    </button>
-    <div v-if="showContent" class="content">
-        <slot></slot>
+    <div>
+        <button @click.prevent="onClickHandler" class="header">
+            {{ title }}
+            <ChevronDown v-if="!showContent" class="icon"></ChevronDown>
+            <ChevronUp v-else class="icon"></ChevronUp>
+        </button>
+        <div v-if="showContent" class="content">
+            <slot></slot>
+        </div>
     </div>
 </template>
 
@@ -44,6 +46,7 @@
     }
 
     .content {
+        max-height: 500px;
         background-color: gray;
         padding: 0.5em;
     }

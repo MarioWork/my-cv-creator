@@ -7,7 +7,7 @@
             :value="value"
             required=""
         />
-        <label class="label" :for="name">First Name</label>
+        <label class="label" :for="name">{{ name }}</label>
     </div>
 </template>
 

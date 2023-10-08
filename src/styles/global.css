@@ -1,5 +1,13 @@
+:root {
+    --primaryColor: rgb(209, 102, 102);
+    --secondaryColor: rgb(182, 198, 73);
+    --backgroundColor: rgb(44, 66, 81);
+    --textColor: rgb(255, 255, 255);
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }

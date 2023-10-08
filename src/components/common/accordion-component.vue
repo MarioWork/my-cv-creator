@@ -1,6 +1,10 @@
 <template>
     <div>
-        <button @click.prevent="onClickHandler" class="header">
+        <button
+            @click.prevent="onClickHandler"
+            class="header"
+            :class="{ showHeaderBorder: showContent }"
+        >
             {{ title }}
             <ChevronDown v-if="!showContent" class="icon"></ChevronDown>
             <ChevronUp v-else class="icon"></ChevronUp>
@@ -34,20 +38,23 @@
     }
     .header {
         width: 100%;
-        background-color: gray;
-        color: white;
-        font-size: 1rem;
+        background-color: var(--backgroundColor);
+        color: var(--textColor);
+        font-size: 1.5rem;
         text-align: left;
         border: 0;
-        padding: 1em 1em 1em 0.5em;
+        padding: 1em 1em 1em 1em;
         cursor: pointer;
         display: flex;
         align-items: center;
     }
 
+    .showHeaderBorder {
+        border-bottom: 0.01em solid var(--secondaryColor);
+    }
+
     .content {
-        max-height: 500px;
-        background-color: gray;
-        padding: 0.5em;
+        background-color: var(--backgroundColor);
+        padding: 1.5em 1em 1.5em 1em;
     }
 </style>

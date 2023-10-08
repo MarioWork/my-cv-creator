@@ -1,12 +1,54 @@
 <template>
     <Accordion title="Personal Info">
-        <label for="name-input">Name</label>
-        <input name="name-input" type="text" />
+        <div class="container">
+            <CustomInput
+                v-for="{ name, type } in inputs"
+                :key="name"
+                :name="name"
+                :type="type"
+            />
+        </div>
     </Accordion>
 </template>
 
 <script setup>
+    import { inputTypes } from '../../../utils/input-types';
+
     import Accordion from '../../common/accordion-component.vue';
+    import CustomInput from '../../common/input-component.vue';
+
+    const inputs = [
+        {
+            name: 'First Name',
+            type: inputTypes.TEXT
+        },
+        {
+            name: 'Nationality',
+            type: inputTypes.TEXT
+        },
+        {
+            name: 'Birthday',
+            type: inputTypes.TEXT
+        },
+        {
+            name: 'Phone',
+            type: inputTypes.TEL
+        },
+        {
+            name: 'Email',
+            type: inputTypes.EMAIL
+        },
+        {
+            name: 'Location',
+            type: inputTypes.TEXT
+        }
+    ];
 </script>
 
-<style scoped></style>
+<style scoped>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+</style>

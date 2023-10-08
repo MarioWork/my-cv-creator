@@ -14,5 +14,7 @@
     main {
         display: grid;
         grid-template-columns: 30% 70%;
+        height: 100dvh;
+        width: 100dvw;
     }
 </style>

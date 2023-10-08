@@ -14,5 +14,10 @@
         display: flex;
         flex-direction: column;
         gap: 0.1em;
+        overflow-y: scroll;
+    }
+
+    .container:first-child {
+        padding-top: 0;
     }
 </style>

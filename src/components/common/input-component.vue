@@ -15,12 +15,15 @@
     import { toRefs } from 'vue';
     import type { inputTypes } from '../../types/input-types';
 
-    const props = withDefaults(
-        defineProps<{ type: inputTypes; value?: string; name: string }>(),
-        { value: '' }
-    );
+    interface propsType {
+        type: inputTypes;
+        value?: string;
+        name: string;
+    }
 
-    const { type, value, name } = toRefs(props);
+    const props = withDefaults(defineProps<propsType>(), { value: '' });
+
+    const { type, value, name } = toRefs<propsType>(props);
 </script>
 
 <style scoped>

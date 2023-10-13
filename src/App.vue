@@ -5,7 +5,7 @@
     </main>
 </template>
 
-<script setup allowJs>
+<script setup lang="ts">
     import SideBarContainer from './components/sidebar/sidebar-container.vue';
     import CvContainer from './components/cv-container.vue';
 </script>

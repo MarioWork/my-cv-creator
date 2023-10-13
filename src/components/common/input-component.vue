@@ -5,25 +5,20 @@
             :name="name"
             class="input"
             :value="value"
-            required=""
+            required="false"
         />
         <label class="label" :for="name">{{ name }}</label>
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
     import { toRefs } from 'vue';
-    import { inputTypes } from '../../utils/input-types';
+    import type { inputTypes } from '../../types/input-types';
 
-    const props = defineProps({
-        type: {
-            type: String,
-            required: true,
-            validator: value => [Object.values(inputTypes)].includes(value)
-        },
-        value: { type: String, required: false, default: '' },
-        name: { type: String, required: true }
-    });
+    const props = withDefaults(
+        defineProps<{ type: inputTypes; value?: string; name: string }>(),
+        { value: '' }
+    );
 
     const { type, value, name } = toRefs(props);
 </script>
@@ -68,3 +63,4 @@
         color: var(--textColor);
     }
 </style>
+../../types/input-types

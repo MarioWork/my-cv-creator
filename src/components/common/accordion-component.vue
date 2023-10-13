@@ -15,18 +15,21 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
     import ChevronDown from '../common/icons/chevron-down.vue';
     import ChevronUp from '../common/icons/chevron-up.vue';
+
     import { toRefs, ref } from 'vue';
 
-    const showContent = ref(false);
+    interface propsType {
+        title: string;
+    }
 
-    const props = defineProps({
-        title: { type: String, required: true }
-    });
+    const showContent = ref<boolean>(false);
 
-    const { title } = toRefs(props);
+    const props = defineProps<propsType>();
+
+    const { title } = toRefs<propsType>(props);
 
     const onClickHandler = () => (showContent.value = !showContent.value);
 </script>

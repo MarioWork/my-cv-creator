@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-    import type { inputTypes } from '../../../types/input-types';
+    import { inputTypes } from '../../../types/input-types';
 
     import Accordion from '../../common/accordion-component.vue';
     import CustomInput from '../../common/input-component.vue';

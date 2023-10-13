@@ -11,8 +11,8 @@
     </Accordion>
 </template>
 
-<script setup>
-    import { inputTypes } from '../../../utils/input-types';
+<script setup lang="ts">
+    import type { inputTypes } from '../../../types/input-types';
 
     import Accordion from '../../common/accordion-component.vue';
     import CustomInput from '../../common/input-component.vue';

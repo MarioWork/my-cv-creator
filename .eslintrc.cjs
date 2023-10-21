@@ -8,13 +8,13 @@ module.exports = {
         'eslint:recommended',
         '@vue/eslint-config-typescript',
         '@vue/eslint-config-prettier/skip-formatting'
-      ],
+    ],
     parserOptions: {
         ecmaVersion: 'latest'
     },
     rules: {
         'no-console': 'warn',
         'no-unused-vars': 'off',
-        'no-undef': 'error'
+        'no-undef': 'off'
     }
 };

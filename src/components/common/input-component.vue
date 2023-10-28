@@ -4,26 +4,42 @@
             :type="type"
             :name="name"
             class="input"
-            :value="value"
             required="false"
+            v-model="inputValue"
         />
         <label class="label" :for="name">{{ name }}</label>
     </div>
 </template>
 
 <script setup lang="ts">
-    import { toRefs } from 'vue';
-    import type { inputTypes } from '../../types/input-types';
+    import { watch, ref, toRefs, defineEmits } from 'vue';
+    import { inputTypes } from '../../types/input-types';
+    import { infoInputNames } from '../../types/section-inputs';
+    import { sectionNames } from '../../types/section-names';
 
     interface propsType {
         type: inputTypes;
-        value?: string;
-        name: string;
+        name: infoInputNames;
     }
 
-    const props = withDefaults(defineProps<propsType>(), { value: '' });
+    const emits = defineEmits<{
+        (
+            e: 'on-change',
+            section: sectionNames,
+            field: infoInputNames,
+            value: string
+        ): void;
+    }>();
 
-    const { type, value, name } = toRefs<propsType>(props);
+    const props = defineProps<propsType>();
+
+    const { type, name } = toRefs<propsType>(props);
+
+    const inputValue = ref('');
+
+    watch(inputValue, newValue => {
+        emits('on-change', sectionNames.INFO, name.value, newValue);
+    });
 </script>
 
 <style scoped>

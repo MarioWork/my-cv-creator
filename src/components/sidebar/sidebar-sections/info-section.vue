@@ -6,6 +6,7 @@
                 :key="name"
                 :name="name"
                 :type="type"
+                @on-change="updateField"
             />
         </div>
     </Accordion>
@@ -13,33 +14,42 @@
 
 <script setup lang="ts">
     import { inputTypes } from '../../../types/input-types';
+    import { infoInputNames } from '../../../types/section-inputs';
 
     import Accordion from '../../common/accordion-component.vue';
     import CustomInput from '../../common/input-component.vue';
 
+    import { useCV } from '../../../composables/use-cv';
+
+    const { data, updateField } = useCV();
+
     const inputs = [
         {
-            name: 'First Name',
+            name: infoInputNames.FIRST_NAME,
             type: inputTypes.TEXT
         },
         {
-            name: 'Nationality',
+            name: infoInputNames.LAST_NAME,
             type: inputTypes.TEXT
         },
         {
-            name: 'Birthday',
+            name: infoInputNames.NATIONALITY,
             type: inputTypes.TEXT
         },
         {
-            name: 'Phone',
+            name: infoInputNames.BIRTHDAY,
+            type: inputTypes.TEXT
+        },
+        {
+            name: infoInputNames.PHONE,
             type: inputTypes.TEL
         },
         {
-            name: 'Email',
+            name: infoInputNames.EMAIL,
             type: inputTypes.EMAIL
         },
         {
-            name: 'Location',
+            name: infoInputNames.LOCATION,
             type: inputTypes.TEXT
         }
     ];

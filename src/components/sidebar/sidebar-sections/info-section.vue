@@ -21,7 +21,7 @@
 
     import { useCV } from '../../../composables/use-cv';
 
-    const { data, updateField } = useCV();
+    const { updateField } = useCV();
 
     const inputs = [
         {

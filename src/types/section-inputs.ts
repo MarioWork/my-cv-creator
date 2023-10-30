@@ -7,3 +7,9 @@ export enum infoInputNames {
     EMAIL = 'email',
     LOCATION = 'location'
 }
+
+export enum socialInputNames {
+    LINKEDIN = 'linkedin',
+    INSTAGRAM = 'instagram',
+    GITHUB = 'github'
+}

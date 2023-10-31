@@ -4,35 +4,19 @@
 
 <script setup lang="ts">
     import { inputTypes } from '../../../types/input-types';
-    import { infoInputNames } from '../../../types/section-inputs';
+    import { socialInputNames } from '../../../types/section-inputs';
 
     const inputs = [
         {
-            name: infoInputNames.FIRST_NAME,
+            name: socialInputNames.LINKEDIN,
             type: inputTypes.TEXT
         },
         {
-            name: infoInputNames.LAST_NAME,
+            name: socialInputNames.GITHUB,
             type: inputTypes.TEXT
         },
         {
-            name: infoInputNames.NATIONALITY,
-            type: inputTypes.TEXT
-        },
-        {
-            name: infoInputNames.BIRTHDAY,
-            type: inputTypes.TEXT
-        },
-        {
-            name: infoInputNames.PHONE,
-            type: inputTypes.TEL
-        },
-        {
-            name: infoInputNames.EMAIL,
-            type: inputTypes.EMAIL
-        },
-        {
-            name: infoInputNames.LOCATION,
+            name: socialInputNames.INSTAGRAM,
             type: inputTypes.TEXT
         }
     ];

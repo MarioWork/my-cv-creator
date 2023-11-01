@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-    import { watch, ref, toRefs, defineEmits } from 'vue';
+    import { watch, ref, toRefs } from 'vue';
     import { inputTypes } from '../../types/input-types';
     import { infoInputNames } from '../../types/section-inputs';
     import { sectionNames } from '../../types/section-names';

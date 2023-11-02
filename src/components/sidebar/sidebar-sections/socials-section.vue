@@ -1,14 +1,15 @@
 <template>
-    <Accordion title="Socials"></Accordion>
-    <div class="container">
-        <CustomInput
-            v-for="{ name, type } in inputs"
-            :key="name"
-            :name="name"
-            :type="type"
-            @on-change="updateField"
-        />
-    </div>
+    <Accordion title="Socials">
+        <div class="container">
+            <CustomInput
+                v-for="{ name, type } in inputs"
+                :key="name"
+                :name="name"
+                :type="type"
+                @on-change="updateField"
+            />
+        </div>
+    </Accordion>
 </template>
 
 <script setup lang="ts">

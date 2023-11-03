@@ -14,12 +14,15 @@
 <script setup lang="ts">
     import { watch, ref, toRefs } from 'vue';
     import { inputTypes } from '../../types/input-types';
-    import { infoInputNames } from '../../types/section-inputs';
+    import {
+        infoInputNames,
+        socialInputNames
+    } from '../../types/section-inputs';
     import { sectionNames } from '../../types/section-names';
 
     interface propsType {
         type: inputTypes;
-        name: infoInputNames;
+        name: infoInputNames | socialInputNames;
     }
 
     const emits = defineEmits<{

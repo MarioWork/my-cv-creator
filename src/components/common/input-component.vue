@@ -29,7 +29,7 @@
         (
             e: 'on-change',
             section: sectionNames,
-            field: infoInputNames,
+            field: infoInputNames | socialInputNames,
             value: string
         ): void;
     }>();

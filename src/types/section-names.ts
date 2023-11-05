@@ -1,3 +1,4 @@
 export enum sectionNames {
-    INFO = 'info'
+    INFO = 'info',
+    SOCIALS = 'socials'
 }

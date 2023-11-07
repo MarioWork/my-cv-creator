@@ -43,6 +43,6 @@
     .container {
         display: flex;
         flex-direction: column;
-        gap: 1.5em;
+        gap: 1.2em;
     }
 </style>

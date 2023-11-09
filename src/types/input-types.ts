@@ -3,5 +3,6 @@ export enum inputTypes {
     NUMBER = 'number',
     EMAIL = 'email',
     TEL = 'tel',
-    URL = 'url'
+    URL = 'url',
+    DATE = 'date'
 }

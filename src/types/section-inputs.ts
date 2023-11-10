@@ -13,3 +13,9 @@ export enum socialInputNames {
     INSTAGRAM = 'instagram',
     GITHUB = 'github'
 }
+
+export enum workExperienceInputNames {
+    start = 'Start',
+    end = 'End',
+    title = 'Title'
+}

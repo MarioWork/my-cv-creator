@@ -16,20 +16,21 @@
     import { inputTypes } from '../../types/input-types';
     import {
         infoInputNames,
-        socialInputNames
+        socialInputNames,
+        workExperienceInputNames
     } from '../../types/section-inputs';
     import { sectionNames } from '../../types/section-names';
 
     interface propsType {
         type: inputTypes;
-        name: infoInputNames | socialInputNames;
+        name: infoInputNames | socialInputNames | workExperienceInputNames;
     }
 
     const emits = defineEmits<{
         (
             e: 'on-change',
             section: sectionNames,
-            field: infoInputNames | socialInputNames,
+            field: infoInputNames | socialInputNames | workExperienceInputNames,
             value: string
         ): void;
     }>();

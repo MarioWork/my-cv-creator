@@ -26,11 +26,11 @@
     const inputs = [
         {
             name: workExperienceInputNames.start,
-            type: inputTypes.TEXT
+            type: inputTypes.DATE
         },
         {
             name: workExperienceInputNames.end,
-            type: inputTypes.TEXT
+            type: inputTypes.DATE
         },
         {
             name: workExperienceInputNames.title,

@@ -2,12 +2,14 @@
     <div class="container">
         <InfoSection></InfoSection>
         <SocialsSection></SocialsSection>
+        <WorkExpSection></WorkExpSection>
     </div>
 </template>
 
 <script setup lang="ts">
     import InfoSection from './sidebar-sections/info-section.vue';
     import SocialsSection from './sidebar-sections/socials-section.vue';
+    import WorkExpSection from './sidebar-sections/work-experience.vue';
 </script>
 
 <style scoped>
